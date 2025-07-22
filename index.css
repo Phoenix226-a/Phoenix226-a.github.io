@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Sora:wght@100..800&display=swap');
+
+* {
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes dotexpandsin {
+    from {font-weight: 100;}
+    to {font-weight: 500;}
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bitcount', serif;
+    font-weight: 500;
+    animation-name: dotexpandsin;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-direction: normal;
+}
