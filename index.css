@@ -1,20 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Sora:wght@100..800&display=swap');
 
+body {
+    background-color: black;
+}
+
 * {
     transition-duration: .25s;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    font-family: 'Sora', sans-serif;
+    color: white;
 }
 
 @keyframes dotexpandsin {
     from {font-weight: 100;}
-    to {font-weight: 500;}
+    to {font-weight: 400;}
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bitcount', serif;
-    font-weight: 500;
+    font-weight: 400;
+    
     animation-name: dotexpandsin;
     animation-duration: 1s;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     animation-direction: normal;
+}
+
+.title-container {
+    height: 97vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & h1 {
+        margin-bottom: 0;
+        font-size: 3rem;
+    }
+}
+
+.container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card {
+    width: auto;
+    padding: 2rem;
+
+    border-radius: 2rem;
+    border-color: white;
+    border-width: 2px;
 }
