@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&family=Sora:wght@100..800&display=swap');
 
 body {
-    background-color: black;
+    background-color: #00182E;
+    margin: 0;
 }
 
 * {
@@ -17,6 +18,17 @@ body {
     to {font-weight: 400;}
 }
 
+@keyframes fadein {
+    0% {opacity: 0%;}
+    75% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+@keyframes fadeinbg {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bitcount', serif;
     font-weight: 400;
@@ -27,8 +39,28 @@ h1, h2, h3, h4, h5, h6 {
     animation-direction: normal;
 }
 
+h1, h2, h3, h4, h5, h6, span {
+    /* text-shadow: 0 0 5px #00000055; */
+    text-shadow: 0 0 5px #3061C2;
+}
+
+.video-bg {
+    position: fixed;
+    z-index: -999;
+
+    & video {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+
+        animation-name: fadeinbg;
+        animation-duration: 4s;
+        animation-direction: normal;
+    }
+}
+
 .title-container {
-    height: 97vh;
+    height: 100vh;
     width: 100%;
 
     display: flex;
@@ -36,9 +68,27 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     flex-direction: column;
 
+    text-align: center;
+
     & h1 {
         margin-bottom: 0;
         font-size: 3rem;
+    }
+
+    & p {
+        margin-top: 0.5rem;
+    }
+
+    & .learn-more {
+        text-decoration: none;
+
+        animation-name: fadein;
+        animation-duration: 3s;
+        animation-direction: normal;
+    }
+
+    & .learn-more:hover {
+        font-weight: 700;
     }
 }
 
@@ -54,8 +104,36 @@ h1, h2, h3, h4, h5, h6 {
 .card {
     width: auto;
     padding: 2rem;
+    margin: 0 2rem;
+
+    text-align: center;
 
     border-radius: 2rem;
-    border-color: white;
-    border-width: 2px;
+    border: 2px solid #ffffff22;
+
+    background-color: #ffffff22;
+
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.card-images {
+    width: 100%;
+}
+
+.card-images-alt {
+    width: 50%;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .card-images-large {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .card-images-small {
+        display: none;
+    }
 }
