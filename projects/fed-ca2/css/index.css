@@ -1,0 +1,95 @@
+/* Import CSS from general.css */
+@import url(general.css);
+
+/* Use CSS variables */
+:root {
+    /* --bgsize should be 10 times of --startsize (1rem = 10vmax) */
+    --startsize: 10rem;
+    --bgsize: 100vmax;
+}
+
+.active-fake { /* The scrollspy also works as a nav with the navbar. This just bypasses the active. */
+    color: black;
+    font-weight: 700;
+}
+
+/* Start */
+@keyframes bg-animation {
+    0%  {background-size: var(--bgsize), 75vmax, var(--bgsize), 75vmax, var(--bgsize);}
+    50%  {background-size: var(--bgsize), 80vmax, var(--bgsize), 80vmax, var(--bgsize);}
+    100%  {background-size: var(--bgsize), 75vmax, var(--bgsize), 75vmax, var(--bgsize);}
+}
+
+.index-start-bg {
+    /*
+    How the bg works:
+
+    There are four layers to the bg.
+    - The SP70 logo outline, placed on the top layer.
+    - The students, placed on the second top layer.
+    - The SP70 logo, placed on the second bottom layer.
+    - The scenery, placed on the bottom layer.
+    
+    When the SP70 logo outline and the SP70 logo are moved together,
+    the students layer blocks the SP70 logo layer, only showing the SP70 logo outline.
+
+    This is also how the SP70 website on sp.edu.sg works.
+    */
+    background-image: url("../images/black-overlay.png"), url("../images/sp70layer4.png"), url("../images/sp70layer3.png"), url("../images/sp70layer2.png"), url("../images/sp70layer1.jpg");
+    background-repeat: no-repeat;
+    background-position: center top, center 32.5%, center top, center 32.5%, center top;
+    background-attachment: scroll, fixed, scroll, fixed, scroll;
+    animation-name: bg-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.index-start {
+    padding: var(--startsize) 0;
+}
+
+.index-text {
+    text-shadow: 0px 0px 20px black;
+}
+
+p.index-text, a.index-text { /* Select p and svg from .index-start */
+    color: white;
+}
+
+a.index-text:hover {
+    color: #ffffffa0;
+    transition-duration: 0.1s
+}
+
+/* History */
+.history-nav .nav-link:hover {
+    background-color: var(--main-transparent-3);
+}
+
+.history-nav .nav-link {
+    color: var(--main);
+}
+
+.history-nav .nav-link.active {
+    color: white;
+    background-color: var(--main) !important;
+}
+
+
+.navb {
+    position: sticky !important;
+    font-size: calc(.75rem + .4vw);
+    top: calc(5rem + .4vw);
+}
+
+/* Gallery */
+.gallery-shadow {
+    text-shadow: 0px 0px 10px #000000;
+}
+
+/* Time Display */
+.time-display {
+    background-color: var(--main-transparent-3);
+    border-radius: 1rem;
+}

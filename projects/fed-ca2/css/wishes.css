@@ -1,0 +1,80 @@
+/* Import CSS from general.css */
+@import url(general.css);
+
+/* Form */
+input:focus, select:focus, textarea:focus {
+    border-color: var(--main-transparent) !important;
+    box-shadow: 0 0 0 .25rem var(--main-transparent-2) !important;
+}
+
+input.form-check-input:checked {
+    border-color: var(--main-transparent);
+    background-color: var(--main);
+}
+
+option:checked {
+    color: white;
+    background-color: var(--main);
+}
+
+/* SP70 banner */
+.wishes-banner {
+    max-width: 100%;
+    border-radius: 1rem;
+    margin-top: 0.75rem;
+}
+
+/* Emoji picker */
+emoji-picker {
+    display: none;
+    height: calc(70% - 7vw - 20vh);
+    box-shadow: 0 0 10px #00000010;
+
+    --emoji-font-family: "Noto Color Emoji";
+    --border-color: var(--bs-border-color);
+    --border-radius: 0.5rem;
+    --input-border-color: var(--bs-border-color);
+    --outline-color: var(--main-transparent);
+    --outline-size: 1px;
+    --button-hover-background: var(--main-transparent-2);
+    --button-active-background: var(--main-transparent-3);
+}
+
+/* Toggle school, form-submitted, fields-missing */
+#school-toggle, #form-submitted, #fields-missing {
+    display: none;
+}
+
+/* Required fields */
+.required::after {
+    content: " *";
+    color: var(--main);
+}
+
+/* Missing required fields (nvm im not changing the color of the text)
+#fields-missing {
+    color: var(--main);
+} */
+.alert-danger {
+    color: black;
+    text-shadow: 0 0 10px white;
+    background-color: var(--main-transparent-2);
+    border-color: var(--main-transparent);
+}
+
+/* Wish Card */
+#wish-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-image: linear-gradient(170deg, white, var(--main-transparent-2));
+}
+
+#wish-card * {
+    font-family: 'Playwrite AU SA', 'Noto Color Emoji', Verdana, Geneva, Tahoma, sans-serif !important;
+    color: black !important;
+}
+
+/* Content for whitespace */
+.container {
+    min-height: calc(76.5vh)
+}

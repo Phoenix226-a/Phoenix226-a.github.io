@@ -1,0 +1,13 @@
+<!-- SP's Achievements -->
+        <div class="py-2">
+
+            <h1>Our Achievements</h1>
+            <p>In a boost to the local manufacturing sector, Microsoft and Singapore Polytechnic (SP) are working together to <strong>enhance the industry’s digital manufacturing capabilities</strong>. The collaboration supports Singapore’s ambitions to drive innovation and grow the local manufacturing sector by 50 percent in the coming years.</p>
+            
+            <div class="d-flex justify-content-center py-2">
+                <a href="https://news.microsoft.com/en-sg/2023/10/18/from-inventory-to-shop-floor-microsoft-and-singapore-polytechnic-join-forces-to-accelerate-industry-4-0-innovation/">
+                    <img src="../images/sp-microsoft-collaboration.jpg" class="image" alt="" width="300">
+                </a>
+            </div>
+            
+        </div>

@@ -1,0 +1,4 @@
+interactive colour scheme for the entire website? (school colours)
+moving arrow in index.html?
+might change the heading font to something else?
+timeline for index history section?

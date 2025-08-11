@@ -1,0 +1,108 @@
+/* Use CSS variables */
+:root {
+    /* SP's main colour: #F6323E */
+    --main: #F6323E;
+    --main-transparent: #F6323EA0;
+    --main-transparent-2: #F6323E50;
+    --main-transparent-3: #F6323E10;
+    --main-dark: #901d25;
+}
+
+/* Apparently Neighbour has stylistic sets. Let's use them! */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Neighbor', 'Noto Color Emoji', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important; /* We used Darkmode On for all text, so !important overrides it. */
+    font-weight: 700 !important; /* !important overrides the bootstrap settings. */
+    font-variant-ligatures: discretionary-ligatures;
+    font-feature-settings: "ss05";
+
+    /* SP's main colour: #F6323E */
+    color: var(--main) !important;
+}
+
+* {
+    font-family: 'Darkmode-On', 'Noto Color Emoji', Verdana, Geneva, Tahoma, sans-serif;
+    font-variant-ligatures: discretionary-ligatures;
+}
+
+/* <nav> elements */
+.active {
+    font-weight: 700;
+}
+
+/* <a> elements */
+p > a, strong > a, label > a {
+    text-decoration: underline;
+    color: var(--main);
+}
+
+p > a:hover, strong > a:hover, label > a:hover {
+    color: var(--main-transparent);
+    transition-duration: 0.1s
+}
+
+a, u {
+    text-decoration: none;
+}
+
+/* Button */
+
+button {
+    color: white;
+}
+
+button.btn-primary {
+    background-color: var(--main);
+    border-color: transparent;
+}
+
+button.btn-primary:hover {
+    background-color: var(--main-transparent);
+    border-color: transparent;
+}
+
+button.btn-primary:active, button.btn-primary:checked, button.btn-primary:focus {
+    background-color: var(--main-dark) !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 transparent !important;
+}
+
+button.btn-secondary {
+    background-color: #808080;
+    border-color: transparent;
+}
+
+button.btn-secondary:hover {
+    background-color: #808080A0;
+    border-color: transparent;
+}
+
+button.btn-secondary:active, button.btn-secondary:checked, button.btn-secondary:focus {
+    background-color: #404040 !important;
+    border-color: transparent !important;
+    box-shadow: 0 0 transparent !important;
+}
+
+/* Footer */
+.footer-link {
+        color: white;
+    }
+
+.footer-link:hover {
+        color: #ffffffa0;
+        transition-duration: 0.1s
+    }
+
+/* Page animation */
+body {
+    animation: fadeInAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
